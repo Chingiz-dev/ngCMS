@@ -1,0 +1,19 @@
+ng new ngCMS --skip-tests
+ng g c components/not-found
+ng g c components/dumb
+ng g m components/guest --routing
+ng g m components/admin --routing
+ng g c components/guest/components/footer
+ng g c components/guest/components/header
+ng g c components/guest/components/home
+ng g c components/guest/components/guest-dashboard
+ng g c components/guest/components/post
+ng g c components/guest/components/posts
+ng g c components/guest/components/author
+ng g c components/guest/components/authors
+
+ng g i model/post
+ng g i model/author
+
+ng g s components/guest/services/post
+

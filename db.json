@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "first post",
+      "category": "html",
+      "description": "Doctors Appointment",
+      "author": "heollo@gami.com",
+      "image": "",
+      "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
+    },
+    {
+      "id": 2,
+      "title": "Second post",
+      "category": "html",
+      "description": "Doctors Appointment",
+      "author": "heollo@gami.com",
+      "image": "",
+      "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
+    },
+    {
+      "id": 3,
+      "title": "Third post",
+      "category": "html",
+      "description": "Doctors Appointment",
+      "author": "heollo@gami.com",
+      "image": "",
+      "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
+    }
+  ]
+}
