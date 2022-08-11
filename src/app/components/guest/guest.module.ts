@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { GuestRoutingModule } from './guest-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
@@ -11,6 +13,8 @@ import { PostComponent } from './components/post/post.component';
 import { AuthorComponent } from './components/author/author.component';
 import { AuthorsComponent } from './components/authors/authors.component';
 import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,14 @@ import { LoginComponent } from './components/login/login.component';
     PostComponent,
     AuthorComponent,
     AuthorsComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
+    CategoryComponent
   ],
   imports: [
     CommonModule,
-    GuestRoutingModule
+    GuestRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class GuestModule { }

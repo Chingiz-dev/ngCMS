@@ -6,14 +6,19 @@ ng g m components/admin --routing
 ng g c components/guest/components/footer
 ng g c components/guest/components/header
 ng g c components/guest/components/home
+ng g c components/guest/components/login
+ng g c components/guest/components/signup
 ng g c components/guest/components/guest-dashboard
 ng g c components/guest/components/post
+ng g c components/guest/components/category
 ng g c components/guest/components/posts
 ng g c components/guest/components/author
 ng g c components/guest/components/authors
 
 ng g i model/post
-ng g i model/author
+ng g i model/user
+ng g i model/category
 
-ng g s components/guest/services/post
-
+ng g s services/post
+ng g s services/auth
+ng g s services/categories

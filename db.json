@@ -6,7 +6,7 @@
       "category": "html",
       "description": "Doctors Appointment",
       "author": "heollo@gami.com",
-      "image": "",
+      "views": 29,
       "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
     },
     {
@@ -15,7 +15,7 @@
       "category": "html",
       "description": "Doctors Appointment",
       "author": "heollo@gami.com",
-      "image": "",
+      "views": 8,
       "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
     },
     {
@@ -24,8 +24,44 @@
       "category": "html",
       "description": "Doctors Appointment",
       "author": "heollo@gami.com",
-      "image": "",
+      "views": 3,
       "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
+    },
+    {
+      "id": 4,
+      "title": "fourt post",
+      "category": "css",
+      "description": "how css works",
+      "author": "heollo@gami.com",
+      "views": 6,
+      "text": "css works brilliant"
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Chingiz",
+      "lastName": "Shigayev",
+      "email": "shigayevphone@gmail.com",
+      "password": "admin123",
+      "confirm": "admin123",
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "html",
+      "description": "In this category we talk about HTML"
+    },
+    {
+      "id": 2,
+      "title": "css",
+      "description": "In this category we talk about CSS, SCSS SASS LESS"
+    },
+    {
+      "id": 3,
+      "title": "JavaScript",
+      "description": "In this category we talk about vanila JavaScript"
     }
   ]
 }

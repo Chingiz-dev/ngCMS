@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Post } from 'src/app/model/post';
 import { catchError, EMPTY, Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { baseUrl } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -14,12 +15,17 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class PostService {
-  private dbUrl = 'http://localhost:5011/posts';
+  private dbUrl = `${baseUrl}/posts`;
 
-  constructor(private http: HttpClient,private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   getPostsList(): Observable<Post[]> {
     return this.http.get<Post[]>(this.dbUrl);
+  }
+
+  getPostsByCategory(category: string): Observable<Post[]> {
+    const url = `${this.dbUrl}?category=${category}`;
+    return this.http.get<Post[]>(url);
   }
 
   getPost(id: number): Observable<Post> {
@@ -31,4 +37,10 @@ export class PostService {
       })
     );
   }
+
+  updatePost(post: Post): Observable<Post> {
+    const url = `${this.dbUrl}/${post.id}`;
+    return this.http.put<Post>(url, post, httpOptions);
+  }
+
 }

@@ -1,5 +1,5 @@
 <p>posts works!</p>
 <div *ngFor="let post of posts">
-<h1>{{post.title}} and some text</h1>
-<button [routerLink]="[post.id]">full post</button>
+  <h1>{{post.title | titlecase}} and some text</h1>
+  <button [routerLink]="[post.id]">full post</button> post views {{post.views}}
 </div>

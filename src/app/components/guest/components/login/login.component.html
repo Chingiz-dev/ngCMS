@@ -1,1 +1,23 @@
-<p>login works!</p>
+<h3>Login into account</h3>
+
+<form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+  <div>
+    <input formControlName="email" type="email" id="typeEmailX">
+    <label for="typeEmailX">Email</label>
+    <p *ngIf="this.loginForm.get('email')?.invalid && this.loginForm.get('email')?.touched"><small>Email is required</small></p>
+  </div>
+
+  <div>
+    <input formControlName="password" type="password" id="typePasswordX">
+    <label for="typePasswordX">Password</label>
+    <p *ngIf="this.loginForm.get('password')?.invalid && this.loginForm.get('password')?.touched"><small>Password is required (min. length = 8, at least one digit)</small></p>
+    <p *ngIf="isLoginFailed">Login failed, try again</p>
+  </div>
+
+  <button [disabled]="loginForm.invalid" type="submit">Login</button>
+</form>
+
+
+<div>
+  <p>Do not have an account? <a routerLink="../signup">Registration</a></p>
+</div>

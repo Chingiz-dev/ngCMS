@@ -4,6 +4,6 @@ export interface Post {
   category: string;
   description: string;
   author: string;
-  image: string;
+  views: number;
   text: string;
 }

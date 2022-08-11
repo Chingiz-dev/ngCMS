@@ -9,12 +9,19 @@
         <li>
           <a routerLinkActive="active" routerLink="./posts">Posts</a>
         </li>
+        <li *ngFor="let category of categories">
+          <button routerLinkActive="active" [routerLink]="'./categories/'+[category.title]">{{category.title | titlecase}}</button>
+        </li>
         <li>
           <a routerLinkActive="active" routerLink="./authors">Authors</a>
         </li>
         <li>
           <a routerLinkActive="active" routerLink="./login">Login</a>
         </li>
+        <li>
+          <a routerLinkActive="active" routerLink="./signup">Singup</a>
+        </li>
       </ul>
     </nav>
 </header>
+<div class="spinner" *ngIf="displayLoadingIndicator"></div>
