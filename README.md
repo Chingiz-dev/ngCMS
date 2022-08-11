@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
+# Run npm install to install local json server
+Run `npm install` to install dependencies.
+
+# Run json server for backend
+
+Run `npm run server` to start backend json server.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
