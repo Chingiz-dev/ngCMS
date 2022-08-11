@@ -35,6 +35,60 @@
       "author": "heollo@gami.com",
       "views": 6,
       "text": "css works brilliant"
+    },
+    {
+      "id": 5,
+      "title": "Как Найти Первую Работу В It",
+      "category": "css",
+      "description": "Не нужно вписывать фреймворки Zend, Symfony и другие,",
+      "author": "heollo@gami.com",
+      "views": 8,
+      "text": "Не нужно вписывать фреймворки Zend, Symfony и другие, если ты с ними не работал. Первая и основная проблема, с которой сталкиваются новички, – резюме. Без адекватного, вас не будут приглашать на собеседования. Но как быть тем, у кого совсем нет опыта работы? Для того чтобы «не с пустыми руками» идти к HR, мы с моим другом вписали мне в резюме целый год опыта работы над его проектом, над которым мы якобы вместе трудились. Вы шлете резюме в компанию мечты, но вам даже не отвечают?"
+    },
+    {
+      "id": 6,
+      "title": "fourt post",
+      "category": "css",
+      "description": "how css works",
+      "author": "heollo@gami.com",
+      "views": 6,
+      "text": "css works brilliant"
+    },
+    {
+      "id": 7,
+      "title": "fourt post",
+      "category": "JavaScript",
+      "description": "how css works",
+      "author": "heollo@gami.com",
+      "views": 7,
+      "text": "css works brilliant"
+    },
+    {
+      "id": 8,
+      "title": "fourt post",
+      "category": "JavaScript",
+      "description": "how css works",
+      "author": "heollo@gami.com",
+      "views": 6,
+      "text": "css works brilliant"
+    },
+    {
+      "id": 9,
+      "title": "fourt post",
+      "category": "JavaScript",
+      "description": "how css works",
+      "author": "heollo@gami.com",
+      "views": 6,
+      "text": "css works brilliant"
+    },
+    {
+      "id": 10,
+      "title": "fourt post",
+      "category": "JavaScript",
+      "description": "how css works",
+      "author": "heollo@gami.com",
+      "views": 6,
+      "text": "css works brilliant"
     }
   ],
   "users": [
@@ -45,6 +99,14 @@
       "password": "admin123",
       "confirm": "admin123",
       "id": 1
+    },
+    {
+      "firstName": "Chingiz",
+      "lastName": "Shigayev",
+      "email": "shigayevphone@gmail.com",
+      "password": "admin123",
+      "confirm": "admin123",
+      "id": 2
     }
   ],
   "categories": [
