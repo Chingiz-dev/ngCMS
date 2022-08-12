@@ -11,8 +11,8 @@ const routes: Routes = [
     path: '', component: AdminDashboardComponent,
     children: [
       { path: 'posts', component: PostsComponent },
-      { path: 'posts/posts/:id', component: PostComponent },
-      { path: 'posts/posts', redirectTo: 'posts', pathMatch: 'full' },
+      { path: 'posts/:id', component: PostComponent },
+      // { path: 'posts/posts', redirectTo: 'posts', pathMatch: 'full' },
       { path: 'categories', component: CategoriesComponent },
       { path: '', redirectTo: 'posts', pathMatch: 'full' },
     ]

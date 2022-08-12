@@ -17,8 +17,8 @@ const routes: Routes = [
     component: GuestDashboardComponent,
     children: [
       { path: 'posts', component: PostsComponent },
-      { path: 'posts/post/:id', component: PostComponent },
-      { path: 'posts/post', redirectTo: 'posts', pathMatch: 'full' },
+      { path: 'posts/:id', component: PostComponent },
+      // { path: 'posts/post', redirectTo: 'posts', pathMatch: 'full' },
       { path: 'categories/:id', component: CategoryComponent },
       { path: 'authors', component: AuthorsComponent },
       { path: 'authors/:id', component: AuthorComponent },

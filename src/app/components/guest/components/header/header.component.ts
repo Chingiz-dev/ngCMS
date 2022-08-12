@@ -50,9 +50,9 @@ export class HeaderComponent implements OnInit {
           routerEvent instanceof NavigationCancel ||
           routerEvent instanceof NavigationError
         ) {
-          setTimeout(() => {
+          // setTimeout(() => {
             this.displayLoadingIndicator = false;
-          }, 100);
+          // }, 100);
         }
       });
   }

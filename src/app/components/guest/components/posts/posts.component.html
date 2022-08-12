@@ -1,5 +1,5 @@
 <p>От странички постс скорее всего буду избавляться так как с наличием Home она излишня</p>
 <div *ngFor="let post of posts">
   <h1>{{post.title | titlecase}}</h1>
-  <button [routerLink]="['post', post.id]">full post</button> post views {{post.views}}
+  <button [routerLink]="[post.id]">full post</button> post views {{post.views}}
 </div>
