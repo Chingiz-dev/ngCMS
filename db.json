@@ -6,7 +6,7 @@
       "category": "html",
       "description": "Doctors Appointment",
       "author": "heollo@gami.com",
-      "views": 29,
+      "views": 37,
       "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
     },
     {
@@ -15,7 +15,7 @@
       "category": "html",
       "description": "Doctors Appointment",
       "author": "heollo@gami.com",
-      "views": 8,
+      "views": 18,
       "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
     },
     {
@@ -24,7 +24,7 @@
       "category": "html",
       "description": "Doctors Appointment",
       "author": "heollo@gami.com",
-      "views": 3,
+      "views": 8,
       "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
     },
     {
@@ -33,7 +33,7 @@
       "category": "css",
       "description": "how css works",
       "author": "heollo@gami.com",
-      "views": 6,
+      "views": 7,
       "text": "css works brilliant"
     },
     {
@@ -42,7 +42,7 @@
       "category": "css",
       "description": "Не нужно вписывать фреймворки Zend, Symfony и другие,",
       "author": "heollo@gami.com",
-      "views": 8,
+      "views": 10,
       "text": "Не нужно вписывать фреймворки Zend, Symfony и другие, если ты с ними не работал. Первая и основная проблема, с которой сталкиваются новички, – резюме. Без адекватного, вас не будут приглашать на собеседования. Но как быть тем, у кого совсем нет опыта работы? Для того чтобы «не с пустыми руками» идти к HR, мы с моим другом вписали мне в резюме целый год опыта работы над его проектом, над которым мы якобы вместе трудились. Вы шлете резюме в компанию мечты, но вам даже не отвечают?"
     },
     {
@@ -60,7 +60,7 @@
       "category": "JavaScript",
       "description": "how css works",
       "author": "heollo@gami.com",
-      "views": 7,
+      "views": 8,
       "text": "css works brilliant"
     },
     {
@@ -69,7 +69,7 @@
       "category": "JavaScript",
       "description": "how css works",
       "author": "heollo@gami.com",
-      "views": 6,
+      "views": 10,
       "text": "css works brilliant"
     },
     {
@@ -78,7 +78,7 @@
       "category": "JavaScript",
       "description": "how css works",
       "author": "heollo@gami.com",
-      "views": 6,
+      "views": 8,
       "text": "css works brilliant"
     },
     {
@@ -95,7 +95,7 @@
     {
       "firstName": "Chingiz",
       "lastName": "Shigayev",
-      "email": "shigayevphone@gmail.com",
+      "email": "admin@gmail.com",
       "password": "admin123",
       "confirm": "admin123",
       "id": 1

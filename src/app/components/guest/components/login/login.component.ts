@@ -22,10 +22,13 @@ export class LoginComponent implements OnInit {
 
   submitLogin() {
     this.userService.getUser(this.loginForm.value.email).subscribe({
-      next: (user: any) => {
+      next: (user: User[]) => {
         if (this.loginForm.value.password === user[0].password) {
-          this.authService.setToken(user[0].firstName);
+          this.authService.login(user[0]);
           this.router.navigate(['admin']);
+        } else {
+          this.isLoginFailed = true;
+          this.loginForm.reset();
         }
       },
       error: () => {
@@ -43,9 +46,5 @@ export class LoginComponent implements OnInit {
         Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/),
       ]),
     });
-
-    if (this.authService.isLoggedIn()) {
-      this.router.navigate(['admin']);
-    }
   }
 }

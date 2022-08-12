@@ -1,6 +1,5 @@
 ng new ngCMS --skip-tests
 ng g c components/not-found
-ng g c components/dumb
 ng g m components/guest --routing
 ng g m components/admin --routing
 ng g c components/guest/components/footer
@@ -14,6 +13,11 @@ ng g c components/guest/components/category
 ng g c components/guest/components/posts
 ng g c components/guest/components/author
 ng g c components/guest/components/authors
+ng g c components/admin/components/footer
+ng g c components/admin/components/header
+ng g c components/admin/components/posts
+ng g c components/admin/components/post
+ng g c components/admin/components/admin-dashboard
 
 ng g i model/post
 ng g i model/user
@@ -22,3 +26,7 @@ ng g i model/category
 ng g s services/post
 ng g s services/auth
 ng g s services/categories
+
+ng g g guards/auth
+* CanActivate
+* CanDeactivate

@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { CategoriesService } from 'src/app/services/categories.service';
 import { Component, OnInit } from '@angular/core';
 import {
@@ -23,10 +24,15 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private categoriesService: CategoriesService
+    private categoriesService: CategoriesService,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
+    if (this.authService.isLoggedIn()) {
+      this.router.navigate(['admin']);
+    }
+
     this.categoriesService
       .getCategories()
       .subscribe((categories: Category[]) => {
@@ -39,7 +45,6 @@ export class HeaderComponent implements OnInit {
         if (routerEvent instanceof NavigationStart) {
           this.displayLoadingIndicator = true;
         }
-
         if (
           routerEvent instanceof NavigationEnd ||
           routerEvent instanceof NavigationCancel ||

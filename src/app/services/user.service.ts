@@ -23,9 +23,9 @@ export class UserService {
     return this.http.post<User>(this.dbUrl, user, httpOptions);
   }
 
-  getUser(email: string): Observable<User> {
+  getUser(email: string): Observable<User[]> {
     const url = `${this.dbUrl}?email=${email}`;
-    return this.http.get<User>(url);
+    return this.http.get<User[]>(url);
   }
 
   getUsers(): Observable<User[]> {
