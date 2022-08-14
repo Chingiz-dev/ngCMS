@@ -1,6 +1,5 @@
 {
   "posts": [
-
     {
       "id": 4,
       "title": "fourt post",
@@ -18,6 +17,60 @@
       "author": "heollo@gami.com",
       "views": 10,
       "text": "Не нужно вписывать фреймворки Zend, Symfony и другие, если ты с ними не работал. Первая и основная проблема, с которой сталкиваются новички, – резюме. Без адекватного, вас не будут приглашать на собеседования. Но как быть тем, у кого совсем нет опыта работы? Для того чтобы «не с пустыми руками» идти к HR, мы с моим другом вписали мне в резюме целый год опыта работы над его проектом, над которым мы якобы вместе трудились. Вы шлете резюме в компанию мечты, но вам даже не отвечают?"
+    },
+    {
+      "title": "New test post",
+      "category": "html",
+      "description": "html post test",
+      "author": "Chingiz",
+      "text": "salkgjaer lot of lorem ipsum",
+      "views": 0,
+      "id": 6
+    },
+    {
+      "title": "fghbsrfbgsf",
+      "category": "css",
+      "description": "dhn jundghvxjyn ",
+      "author": "gdh jgdhjndthj",
+      "text": "tdugh jyujkyii 6e6tui 6e8tiyjd",
+      "views": 2,
+      "id": 7
+    },
+    {
+      "title": "my first normal post",
+      "category": "css",
+      "description": "should be some desc",
+      "author": "Chingiz",
+      "text": "Lorem ipsum and some other text",
+      "views": 0,
+      "id": 8
+    },
+    {
+      "title": "tst7ybujtsy",
+      "category": "JavaScript",
+      "description": "tbyjtnhjbwyt",
+      "author": "tyjb tnhjtn",
+      "text": "jsyu jtuk muij mey yi koiouk8du",
+      "views": 0,
+      "id": 9
+    },
+    {
+      "title": "shwbybs h5w7yrsh",
+      "category": "css",
+      "description": "tdghj untshj",
+      "author": "thjtnehjtn y",
+      "text": "ujet i68 eu tik86i j6mejdn",
+      "views": 0,
+      "id": 10
+    },
+    {
+      "title": "shwbybs h5w7yrsh",
+      "category": "css",
+      "description": "tdghj untshj",
+      "author": "thjtnehjtn y",
+      "text": "ujet i68 eu tik86i j6mejdn",
+      "views": 0,
+      "id": 11
     }
   ],
   "users": [

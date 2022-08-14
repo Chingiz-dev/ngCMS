@@ -5,21 +5,21 @@ import { Category } from 'src/app/model/category';
 import { CategoriesService } from 'src/app/services/categories.service';
 import { PostService } from 'src/app/services/post.service';
 
-
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-post.component.html',
   styleUrls: ['./add-post.component.scss'],
 })
 export class AddPostComponent implements OnInit {
-  // @Output() onAddPost = new EventEmitter<Post>();
   @Output() onAddPost: EventEmitter<Post> = new EventEmitter();
   addPostForm!: FormGroup;
   categories: Category[] = [];
   post?: Post;
 
-  constructor(private categoriesService: CategoriesService, private postService: PostService) {}
-
+  constructor(
+    private categoriesService: CategoriesService,
+    private postService: PostService
+  ) {}
 
   submitAddPost() {
     const newPost: Post = {
@@ -28,18 +28,10 @@ export class AddPostComponent implements OnInit {
       description: this.addPostForm.get('description')!.value,
       author: this.addPostForm.get('author')!.value,
       text: this.addPostForm.get('text')!.value,
-      views: 0
-    }
-    // this.onAddPost.emit(this.addPostForm.value);
-    console.log('emmited', this.addPostForm.value);
-    console.log('emmited', newPost);
-
+      views: 0,
+    };
     this.onAddPost.emit(newPost);
-    // this.postService.addPost(newPost).subscribe((post) => {
-    //   console.log(post);
-    //   this.post = post;
-    // });
-    // this.addPostForm.reset();
+    this.addPostForm.reset();
   }
 
   ngOnInit(): void {
@@ -47,6 +39,10 @@ export class AddPostComponent implements OnInit {
       .getCategories()
       .subscribe((categories: Category[]) => {
         this.categories = categories;
+        this.addPostForm.controls['category'].setValue(
+          this.categories[0].title,
+          { onlySelf: true }
+        );
       });
 
     this.addPostForm = new FormGroup({
@@ -54,7 +50,7 @@ export class AddPostComponent implements OnInit {
         Validators.required,
         Validators.minLength(5),
       ]),
-      category: new FormControl(this.categories[0]),
+      category: new FormControl([Validators.required]),
       description: new FormControl('', [
         Validators.required,
         Validators.minLength(10),
