@@ -5,6 +5,7 @@ import { PostsComponent } from '../admin/components/posts/posts.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { CategoriesComponent } from '../admin/components/categories/categories.component';
 import { PostComponent } from './components/post/post.component';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       // { path: 'posts/posts', redirectTo: 'posts', pathMatch: 'full' },
       { path: 'categories', component: CategoriesComponent },
       { path: '', redirectTo: 'posts', pathMatch: 'full' },
+      { path: '**', component: NotFoundComponent },
     ]
   }
 ];

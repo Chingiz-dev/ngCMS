@@ -8,6 +8,8 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { PostsComponent } from './components/posts/posts.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { PostComponent } from './components/post/post.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { PostComponent } from './components/post/post.component';
     AdminDashboardComponent,
     PostsComponent,
     CategoriesComponent,
-    PostComponent
+    PostComponent,
+    AddPostComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

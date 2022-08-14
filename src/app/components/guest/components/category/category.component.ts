@@ -8,6 +8,7 @@ import {
 import { ActivatedRoute, Params } from '@angular/router';
 import { PostService } from 'src/app/services/post.service';
 import { Post } from 'src/app/model/post';
+import { Category } from 'src/app/model/category';
 
 @Component({
   selector: 'app-category',
@@ -29,8 +30,8 @@ export class CategoryComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params) => {
       this.id = params?.['id'];
 
-      this.categoryService.getCategory(this.id).subscribe((data: any) => {
-        this.description = data[0].description;
+      this.categoryService.getCategory(this.id).subscribe((categories: Category[]) => {
+        this.description = categories[0].description;
       });
 
       this.postService

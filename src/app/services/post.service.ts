@@ -19,6 +19,10 @@ export class PostService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
+  addPost(post: Post): Observable<Post> {
+    return this.http.post<Post>(this.dbUrl, post, httpOptions);
+  }
+
   getPostsList(): Observable<Post[]> {
     return this.http.get<Post[]>(this.dbUrl);
   }

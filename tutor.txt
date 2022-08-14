@@ -17,6 +17,7 @@ ng g c components/admin/components/footer
 ng g c components/admin/components/header
 ng g c components/admin/components/posts
 ng g c components/admin/components/post
+ng g c components/admin/components/add-post
 ng g c components/admin/components/admin-dashboard
 
 ng g i model/post

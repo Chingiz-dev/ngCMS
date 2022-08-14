@@ -1,32 +1,6 @@
 {
   "posts": [
-    {
-      "id": 1,
-      "title": "first post",
-      "category": "html",
-      "description": "Doctors Appointment",
-      "author": "heollo@gami.com",
-      "views": 58,
-      "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
-    },
-    {
-      "id": 2,
-      "title": "Second post",
-      "category": "html",
-      "description": "Doctors Appointment",
-      "author": "heollo@gami.com",
-      "views": 27,
-      "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
-    },
-    {
-      "id": 3,
-      "title": "Third post",
-      "category": "html",
-      "description": "Doctors Appointment",
-      "author": "heollo@gami.com",
-      "views": 14,
-      "text": "lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla, lorem ipsum bla bla bla bla bla"
-    },
+
     {
       "id": 4,
       "title": "fourt post",
@@ -44,51 +18,6 @@
       "author": "heollo@gami.com",
       "views": 10,
       "text": "Не нужно вписывать фреймворки Zend, Symfony и другие, если ты с ними не работал. Первая и основная проблема, с которой сталкиваются новички, – резюме. Без адекватного, вас не будут приглашать на собеседования. Но как быть тем, у кого совсем нет опыта работы? Для того чтобы «не с пустыми руками» идти к HR, мы с моим другом вписали мне в резюме целый год опыта работы над его проектом, над которым мы якобы вместе трудились. Вы шлете резюме в компанию мечты, но вам даже не отвечают?"
-    },
-    {
-      "id": 6,
-      "title": "fourt post",
-      "category": "css",
-      "description": "how css works",
-      "author": "heollo@gami.com",
-      "views": 10,
-      "text": "css works brilliant"
-    },
-    {
-      "id": 7,
-      "title": "fourt post",
-      "category": "JavaScript",
-      "description": "how css works",
-      "author": "heollo@gami.com",
-      "views": 9,
-      "text": "css works brilliant"
-    },
-    {
-      "id": 8,
-      "title": "fourt post",
-      "category": "JavaScript",
-      "description": "how css works",
-      "author": "heollo@gami.com",
-      "views": 10,
-      "text": "css works brilliant"
-    },
-    {
-      "id": 9,
-      "title": "fourt post",
-      "category": "JavaScript",
-      "description": "how css works",
-      "author": "heollo@gami.com",
-      "views": 8,
-      "text": "css works brilliant"
-    },
-    {
-      "id": 10,
-      "title": "fourt post",
-      "category": "JavaScript",
-      "description": "how css works",
-      "author": "heollo@gami.com",
-      "views": 6,
-      "text": "css works brilliant"
     }
   ],
   "users": [

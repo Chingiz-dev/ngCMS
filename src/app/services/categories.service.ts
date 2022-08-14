@@ -22,9 +22,9 @@ export class CategoriesService {
     return this.http.post<Category>(this.dbUrl, category, httpOptions);
   }
 
-  getCategory(title: string): Observable<Category> {
+  getCategory(title: string): Observable<Category[]> {
     const url = `${this.dbUrl}?title=${title}`;
-    return this.http.get<Category>(url);
+    return this.http.get<Category[]>(url);
   }
 
   getCategories(): Observable<Category[]> {

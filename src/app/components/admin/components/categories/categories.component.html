@@ -1,1 +1,5 @@
 <p>categories works!</p>
+<div *ngFor="let category of categories">
+  <h1>{{category.title | titlecase}}</h1>
+<p>{{category.description}}</p>
+</div>
