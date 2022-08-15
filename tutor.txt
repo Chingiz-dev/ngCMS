@@ -7,6 +7,7 @@ ng g c components/guest/components/header
 ng g c components/guest/components/home
 ng g c components/guest/components/login
 ng g c components/guest/components/signup
+ng g c components/guest/components/sidebar
 ng g c components/guest/components/guest-dashboard
 ng g c components/guest/components/post
 ng g c components/guest/components/category

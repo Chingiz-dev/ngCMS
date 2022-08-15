@@ -15,6 +15,7 @@ import { AuthorsComponent } from './components/authors/authors.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { CategoryComponent } from './components/category/category.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CategoryComponent } from './components/category/category.component';
     AuthorsComponent,
     LoginComponent,
     SignupComponent,
-    CategoryComponent
+    CategoryComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,

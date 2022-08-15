@@ -1,5 +1,27 @@
-<p>post works!</p>
-<div>{{post?.title}}</div>
-<div>{{post?.text}}</div>
-<div>Post views = {{post?.views}}</div>
+<h2>post edit</h2>
+
+<form *ngIf="post" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="title">Change Title</label>
+    <input type="text" name="title" [(ngModel)]="post.title" id="title" placeholder="title" />
+  </div>
+  <div class="form-control">
+    <label for="description">Change description</label>
+    <textarea name="description" [(ngModel)]="post.description" id="description" placeholder="description"></textarea>
+  </div>
+  <div class="form-control">
+    <label for="author">Change author</label>
+    <input type="text" name="author" [(ngModel)]="post.author" id="author" placeholder="author" />
+  </div>
+  <div class="form-control">
+    <label for="views">Change views</label>
+    <input type="number" name="views" [(ngModel)]="post.views" id="views" placeholder="post.views" />
+  </div>
+  <div class="form-control">
+    <label for="text">Change text</label>
+    <textarea name="text" [(ngModel)]="post.text" id="text" placeholder="text"></textarea>
+  </div>
+
+  <input type="submit" value="Save changes" />
+</form>
 <button [routerLink]="['../']">Go Back</button>

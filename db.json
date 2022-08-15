@@ -1,22 +1,31 @@
 {
   "posts": [
     {
-      "title": "first post",
-      "category": "html",
-      "description": "some nuew post",
+      "title": "first super post",
+      "category": "Frontend",
+      "description": "any descyipi oh nonononon",
       "author": "Chingiz",
-      "text": "KLJLSdhg vherif;gh krfjvlKDJFglvJD;m rgf alrjgl RIFGJLVF ",
-      "views": 0,
+      "text": "laskjg erkaejhlhj laejfglfadv gsfgte wthtr ",
+      "views": 7,
       "id": 1
     },
     {
-      "title": "GHKJBE RLKGJL;ve",
-      "category": "css",
-      "description": "d hbryafhn",
-      "author": "rsyf nfn af",
-      "text": "fs nhj ty j6ei rydmj udk meyud",
-      "views": 0,
+      "title": "secont",
+      "category": "Frontend",
+      "description": "afgreg ergt ",
+      "author": "kldjgk",
+      "text": "ldg lsjg tljfg stildgf wt q",
+      "views": 17,
       "id": 2
+    },
+    {
+      "title": "third",
+      "category": "Frontend",
+      "description": "Thier post and it is not important at all",
+      "author": "Chingiz",
+      "text": "loter impidf rrafgtra rg nsyhnysfxgb rt b",
+      "views": 1,
+      "id": 3
     }
   ],
   "users": [

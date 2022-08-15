@@ -3,35 +3,39 @@
   <div>
     <label for="title">Post title</label>
     <input formControlName="title" type="text" id="title">
-    <p *ngIf="this.addPostForm.get('title')?.invalid && this.addPostForm.get('title')?.touched"><small >Title is required</small></p>
+    <p *ngIf="this.addPostForm.get('title')?.invalid && this.addPostForm.get('title')?.touched"><small>Title is
+        required</small></p>
   </div>
 
   <div>
     <label for="category">Post category</label>
-  <select formControlName="category">
-    <option *ngFor="let c of categories" [ngValue]="c.title">
-      {{ c.title }}
-    </option>
-  </select>
-</div>
+    <select formControlName="category">
+      <option *ngFor="let c of categories" [ngValue]="c.title">
+        {{ c.title }}
+      </option>
+    </select>
+  </div>
 
   <div>
     <label for="description">description </label>
     <input formControlName="description" type="text" id="description">
-    <p *ngIf="this.addPostForm.get('description')?.invalid && this.addPostForm.get('description')?.touched"><small >description is required</small></p>
+    <p *ngIf="this.addPostForm.get('description')?.invalid && this.addPostForm.get('description')?.touched">
+      <small>description is required</small></p>
   </div>
 
   <div>
     <label for="author">author</label>
     <input formControlName="author" type="email" id="author">
-    <p *ngIf="this.addPostForm.get('author')?.invalid && this.addPostForm.get('author')?.touched"><small >author is required</small></p>
+    <p *ngIf="this.addPostForm.get('author')?.invalid && this.addPostForm.get('author')?.touched"><small>author is
+        required</small></p>
   </div>
 
   <div>
     <label for="text">text</label>
     <textarea formControlName="text" id="text"></textarea>
-    <p *ngIf="this.addPostForm.get('text')?.invalid && this.addPostForm.get('text')?.touched"><small>text is required (min. length = 8, at least one digit)</small></p>
+    <p *ngIf="this.addPostForm.get('text')?.invalid && this.addPostForm.get('text')?.touched"><small>text is required
+        (min. length = 8, at least one digit)</small></p>
   </div>
 
-  <button [disabled]="addPostForm.invalid"  type="submit">Add post</button>
+  <button [disabled]="addPostForm.invalid" type="submit">Add post</button>
 </form>

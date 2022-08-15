@@ -24,11 +24,17 @@ export class PostService {
   }
 
   getPostsList(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.dbUrl);
+    const url = `${this.dbUrl}?_sort=id&_order=desc`;
+    return this.http.get<Post[]>(url);
+  }
+
+  getPostsByViews(): Observable<Post[]> {
+    const url = `${this.dbUrl}?_sort=views&_order=desc`;
+    return this.http.get<Post[]>(url);
   }
 
   getPostsByCategory(category: string): Observable<Post[]> {
-    const url = `${this.dbUrl}?category=${category}`;
+    const url = `${this.dbUrl}?category=${category}&_sort=id&_order=desc`;
     return this.http.get<Post[]>(url);
   }
 
@@ -36,7 +42,6 @@ export class PostService {
     const url = `${this.dbUrl}/${id}`;
     return this.http.get<Post>(url);
   }
-
 
   updatePost(post: Post): Observable<Post> {
     const url = `${this.dbUrl}/${post.id}`;
