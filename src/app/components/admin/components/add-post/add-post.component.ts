@@ -35,16 +35,6 @@ export class AddPostComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.categoriesService
-      .getCategories()
-      .subscribe((categories: Category[]) => {
-        this.categories = categories;
-        this.addPostForm.controls['category'].setValue(
-          this.categories[0].title,
-          { onlySelf: true }
-        );
-      });
-
     this.addPostForm = new FormGroup({
       title: new FormControl('', [
         Validators.required,
@@ -63,6 +53,16 @@ export class AddPostComponent implements OnInit {
         Validators.required,
         Validators.minLength(20),
       ]),
+    });
+
+    this.categoriesService
+    .getCategories()
+    .subscribe((categories: Category[]) => {
+      this.categories = categories;
+      this.addPostForm.controls['category'].setValue(
+        this.categories[0].title,
+        { onlySelf: true }
+      );
     });
   }
 }

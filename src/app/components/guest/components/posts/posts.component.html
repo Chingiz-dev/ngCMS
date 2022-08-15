@@ -1,5 +1,28 @@
-<p>От странички постс скорее всего буду избавляться так как с наличием Home она излишня</p>
-<div *ngFor="let post of posts">
-  <h1>{{post.title | titlecase}}</h1>
-  <button [routerLink]="[post.id]">full post</button> post views {{post.views}}
+<div class="main-block">
+  <div class="main-block__item">
+    <h1 class="main-block__header">Веб разработка с нуля!</h1>
+    <p>Данный сайт посвящен различным языкам и технологиям программирования, компьютерам, мобильным платформам и
+      ИТ-технологиям. Здесь будут выкладываться различные руководства и учебные материалы, статьи и примеры.
+
+      На сайте можно найти материалы по таким направлениям, как язык C# и семейство технологий .NET (ASP.NET, WPF,
+      Entity Framework и т.д.), технологии на базе Java ( Java SE, программирование под ОС Андроид и т.д.), Python, Dart
+      (в том числе Flutter), работа с базами данных (MS SQL Server, MySQL, MongoDB) а также WEB-технологии, такие как
+      HTML5, AJAX, jQuery, Node.js, ExtJS, Angular, React и др.
+
+      Поскольку жизнь не стоит на месте, все материалы по возможности дополняются и обновляются, чтобы соответствовать
+      духу времени и не терять своей актуальности.
+
+      По всем вопросам касательно сайта пишите по адресу metanit22@mail.ru.
+
+      Спасибо за посещение сайта.</p>
+  </div>
+
+  <div class="main-block__item">
+    <h2 class="main-block__header">Что нового</h2>
+    <div *ngFor="let post of posts">
+      <h1>{{post.title | titlecase}}</h1>
+      <p>{{ post.description | slice:0:50 }}</p>
+      <button [routerLink]="[post.id]">full post</button> post views {{post.views}}
+    </div>
+  </div>
 </div>

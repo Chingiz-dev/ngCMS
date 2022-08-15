@@ -1,22 +1,17 @@
 <header>
-    <nav class="navbar">
-      <ul>
-        <li>
-          <a routerLinkActive="active" routerLink="./home">Home</a>
-        </li>
-        <li>
-          <a routerLinkActive="active" routerLink="./posts">Posts</a>
-        </li>
-        <li *ngFor="let category of categories">
-          <button routerLinkActive="active" [routerLink]="'./categories/'+[category.title]">{{category.title | titlecase}}</button>
-        </li>
-        <li>
-          <a routerLinkActive="active" routerLink="./authors">Authors</a>
-        </li>
-        <li>
-          <a routerLinkActive="active" routerLink="./login">Login</a>
-        </li>
-      </ul>
-    </nav>
+  <nav class="navbar">
+    <ul>
+      <li>
+        <a routerLinkActive="active" routerLink="./posts">Posts</a>
+      </li>
+      <li *ngFor="let category of categories">
+        <a routerLinkActive="active" [routerLink]="'./categories/'+[category.title]">{{category.title |
+          titlecase}}</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="./login">Login</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 <div class="spinner" *ngIf="displayLoadingIndicator"></div>

@@ -1,6 +1,16 @@
-<h2>category: {{id | titlecase}}</h2>
-<p *ngIf="description">{{description}}</p>
-<div *ngFor="let post of posts">
-  <h1>{{post.title | titlecase}}</h1>
-  <button [routerLink]="'../../posts/'+[post.id]">full post</button> post views {{post.views}}
+<div class="main-block">
+  <div class="main-block__item">
+
+    <h2 class="main-block__header">О разделе {{id | titlecase}}</h2>
+    <p *ngIf="description">{{description}}</p>
+  </div>
+
+  <div class="main-block__item">
+    <h2 class="main-block__header">Что нового</h2>
+    <div *ngFor="let post of posts">
+      <h1>{{post.title | titlecase}}</h1>
+      <p>{{ post.description | slice:0:50 }}</p>
+      <button [routerLink]="'../../posts/'+[post.id]">full post</button> post views {{post.views}}
+    </div>
+  </div>
 </div>

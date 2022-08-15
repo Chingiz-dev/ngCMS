@@ -1,0 +1,12 @@
+.main-block {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    width: 40%;
+    padding: 5px;
+  }
+  &__header {
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
+  }
+}
