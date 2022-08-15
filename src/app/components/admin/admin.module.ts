@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
@@ -10,6 +11,10 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { PostComponent } from './components/post/post.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonComponent } from './components/button/button.component';
+import { PostShortComponent } from './components/post-short/post-short.component';
+import { CategoryShortComponent } from './components/category-short/category-short.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
 
 
 @NgModule({
@@ -20,10 +25,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     PostsComponent,
     CategoriesComponent,
     PostComponent,
-    AddPostComponent
+    AddPostComponent,
+    ButtonComponent,
+    PostShortComponent,
+    CategoryShortComponent,
+    AddCategoryComponent
   ],
   imports: [
     CommonModule,
+    FontAwesomeModule,
     AdminRoutingModule,
     ReactiveFormsModule
   ]

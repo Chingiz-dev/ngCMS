@@ -1,0 +1,7 @@
+<div class="category">
+  <h2>{{ category.title | titlecase }} <fa-icon (click)="onDelete(category)" [ngStyle]="{'color': 'red'}" [icon]="faTimes">
+    </fa-icon>
+    <fa-icon [routerLink]="[category.id]" [ngStyle]="{'color': 'green'}" [icon]="faEdit"></fa-icon>
+  </h2>
+  <h3>{{category.description | titlecase}}</h3>
+</div>

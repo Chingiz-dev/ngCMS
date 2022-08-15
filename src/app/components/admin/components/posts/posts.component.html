@@ -1,7 +1,5 @@
 <p>Here we edit creat delete posts</p>
-<!-- <app-add-post (onAddPost)="addNewPost()"></app-add-post> -->
-<app-add-post (onAddPost)="addNewPost($event)"></app-add-post>
-<div *ngFor="let post of posts">
-  <h1>{{post.title | titlecase}}</h1>
-  <button [routerLink]="[post.id]">full post</button> post views {{post.views}}
-</div>
+<app-button color="{{ showAddPost ? 'red': 'green'}}" text="{{ showAddPost ? 'Close': 'Add'}}" (btnClick)="toggleAddPost()"></app-button>
+<app-add-post *ngIf="showAddPost" (onAddPost)="addNewPost($event)"></app-add-post>
+
+<app-post-short *ngFor="let post of posts" [post]="post" (onDeletePost)="deletePost(post)"></app-post-short>

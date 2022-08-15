@@ -1,0 +1,7 @@
+<div class="post">
+  <h2>{{ post.title | titlecase }} <fa-icon (click)="onDelete(post)" [ngStyle]="{'color': 'red'}" [icon]="faTimes">
+    </fa-icon>
+    <fa-icon [routerLink]="[post.id]" [ngStyle]="{'color': 'green'}" [icon]="faEdit"></fa-icon>
+  </h2>
+  <h3>{{post.description | titlecase}}</h3>
+</div>

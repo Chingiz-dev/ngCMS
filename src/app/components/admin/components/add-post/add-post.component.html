@@ -33,5 +33,5 @@
     <p *ngIf="this.addPostForm.get('text')?.invalid && this.addPostForm.get('text')?.touched"><small>text is required (min. length = 8, at least one digit)</small></p>
   </div>
 
-  <button [disabled]="addPostForm.invalid"  type="submit">post</button>
+  <button [disabled]="addPostForm.invalid"  type="submit">Add post</button>
 </form>

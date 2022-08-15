@@ -9,6 +9,7 @@ import { Post } from 'src/app/model/post';
 })
 export class PostsComponent implements OnInit {
   posts: Post[] = [];
+  showAddPost: boolean = false;
 
   constructor(private postService: PostService) {}
 
@@ -18,9 +19,21 @@ export class PostsComponent implements OnInit {
     });
   }
 
+  toggleAddPost() {
+    this.showAddPost = !this.showAddPost;
+  }
+
   addNewPost(post: Post) {
     this.postService
       .addPost(post)
       .subscribe((post) => (this.posts = [...this.posts, post]));
+  }
+
+  deletePost(post: Post) {
+    this.postService
+      .deletePost(post)
+      .subscribe(
+        () => (this.posts = this.posts.filter((item) => item.id !== post.id))
+      );
   }
 }

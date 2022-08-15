@@ -51,4 +51,9 @@ export class PostService {
     return this.http.put<Post>(url, post, httpOptions);
   }
 
+  deletePost(post: Post): Observable<Post> {
+    const url = `${this.dbUrl}/${post.id}`;
+    return this.http.delete<Post>(url);
+  }
+
 }
