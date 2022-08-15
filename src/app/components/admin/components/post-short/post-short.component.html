@@ -1,7 +1,11 @@
 <div class="post">
-  <h2>{{ post.title | titlecase }} <fa-icon (click)="onDelete(post)" [ngStyle]="{'color': 'red'}" [icon]="faTimes">
-    </fa-icon>
-    <fa-icon [routerLink]="[post.id]" [ngStyle]="{'color': 'green'}" [icon]="faEdit"></fa-icon>
-  </h2>
+  <h2>{{ post.title | titlecase }}</h2>
   <h3>{{post.description | titlecase | slice:0:50}}</h3>
+  <span class="post__icon">
+    <fa-icon (click)="onDelete(post)" [ngStyle]="{'color': 'red'}" [icon]="faTimes">
+    </fa-icon>
+  </span>
+  <span class="post__icon">
+    <fa-icon [routerLink]="[post.id]" [ngStyle]="{'color': 'green'}" [icon]="faEdit"></fa-icon>
+  </span>
 </div>

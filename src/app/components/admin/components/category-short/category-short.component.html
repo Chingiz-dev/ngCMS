@@ -1,11 +1,11 @@
 <div class="category">
   <h2>{{ category.title | titlecase }}</h2>
   <h3>{{category.description | slice:0:50 }}</h3>
-  <span class="icon">
+  <span class="category__icon">
     <fa-icon [ngStyle]="{'color': editCategory ? 'red' : 'green'}" [icon]="faEdit" (click)="toggleEditCategory()">
     </fa-icon>
   </span>
-  <span class="icon">
+  <span class="category__icon">
     <fa-icon (click)="onDelete(category)" [ngStyle]="{'color': 'red'}" [icon]="faTimes">
     </fa-icon>
   </span>
@@ -20,8 +20,5 @@
       <textarea name="description" [(ngModel)]="description" id="description" placeholder="description"></textarea>
     </div>
     <input type="submit" value="Save changes" />
-
   </form>
-
-
 </div>

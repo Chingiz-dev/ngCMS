@@ -10,7 +10,11 @@
     <div *ngFor="let post of posts" class="main-block__card">
       <h1>{{post.title | titlecase}}</h1>
       <p>{{ post.description | slice:0:50 }}</p>
-      <a [routerLink]="'../../posts/'+[post.id]">Читать далее</a> post views {{post.views}}
+      <a [routerLink]="'../../posts/'+[post.id]">Читать далее</a> {{post.views}}
+      <span class="icon">
+        <fa-icon [icon]="faEye" [ngStyle]="{'color': '#16a1e7'}">
+        </fa-icon>
+      </span>
     </div>
   </div>
 </div>

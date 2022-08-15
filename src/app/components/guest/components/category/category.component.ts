@@ -6,6 +6,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { PostService } from 'src/app/services/post.service';
 import { Post } from 'src/app/model/post';
 import { Category } from 'src/app/model/category';
@@ -19,6 +20,7 @@ export class CategoryComponent implements OnInit {
   id!: string;
   posts: Post[] = [];
   description?: string;
+  faEye = faEye;
 
   constructor(
     private activatedRoute: ActivatedRoute,
