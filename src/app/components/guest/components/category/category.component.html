@@ -7,10 +7,10 @@
 
   <div class="main-block__item">
     <h2 class="main-block__header">Что нового</h2>
-    <div *ngFor="let post of posts">
+    <div *ngFor="let post of posts" class="main-block__card">
       <h1>{{post.title | titlecase}}</h1>
       <p>{{ post.description | slice:0:50 }}</p>
-      <button [routerLink]="'../../posts/'+[post.id]">full post</button> post views {{post.views}}
+      <a [routerLink]="'../../posts/'+[post.id]">Читать далее</a> post views {{post.views}}
     </div>
   </div>
 </div>

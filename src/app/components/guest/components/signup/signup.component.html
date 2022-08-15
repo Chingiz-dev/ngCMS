@@ -1,32 +1,32 @@
 <h3>Register new account</h3>
 <form [formGroup]="signupForm" (ngSubmit)="submitSignup()">
   <div>
-    <label for="typeFirstNameX">First name</label>
     <input formControlName="firstName" type="text" id="typeFirstNameX">
+    <label for="typeFirstNameX"> First name</label>
     <p *ngIf="this.signupForm.get('firstName')?.invalid && this.signupForm.get('firstName')?.touched"><small >First name is required</small></p>
   </div>
 
   <div>
-    <label for="typeLastNameX">Last name</label>
     <input formControlName="lastName" type="text" id="typeLastNameX">
+    <label for="typeLastNameX"> Last name</label>
     <p *ngIf="this.signupForm.get('lastName')?.invalid && this.signupForm.get('lastName')?.touched"><small >Last name is required</small></p>
   </div>
 
   <div>
-    <label for="typeEmailX">Email</label>
     <input formControlName="email" type="email" id="typeEmailX">
+    <label for="typeEmailX"> Email</label>
     <p *ngIf="this.signupForm.get('email')?.invalid && this.signupForm.get('email')?.touched"><small >Email is required</small></p>
   </div>
 
   <div>
-    <label for="typePasswordX">Password</label>
     <input formControlName="password" type="password" id="typePasswordX">
+    <label for="typePasswordX"> Password</label>
     <p *ngIf="this.signupForm.get('password')?.invalid && this.signupForm.get('password')?.touched"><small >Password is required (min. length = 8, at least one digit)</small></p>
   </div>
 
   <div>
-    <label for="typeConfirmX">Confirm Password</label>
     <input formControlName="confirm" type="password" id="typeConfirmX">
+    <label for="typeConfirmX"> Confirm Password</label>
     <p *ngIf="this.signupForm.get('confirm')?.invalid && this.signupForm.get('confirm')?.touched"><small >Confirm your password</small></p>
   </div>
 

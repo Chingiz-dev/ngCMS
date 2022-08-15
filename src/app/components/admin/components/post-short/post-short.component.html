@@ -3,5 +3,5 @@
     </fa-icon>
     <fa-icon [routerLink]="[post.id]" [ngStyle]="{'color': 'green'}" [icon]="faEdit"></fa-icon>
   </h2>
-  <h3>{{post.description | titlecase}}</h3>
+  <h3>{{post.description | titlecase | slice:0:50}}</h3>
 </div>

@@ -1,7 +1,10 @@
-
 <app-header></app-header>
 <div class="main">
-  <router-outlet></router-outlet>
-  <app-sidebar></app-sidebar>
+  <div class="main__main">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="main__side">
+    <app-sidebar></app-sidebar>
+  </div>
 </div>
 <app-footer></app-footer>

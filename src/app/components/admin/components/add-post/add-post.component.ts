@@ -32,6 +32,10 @@ export class AddPostComponent implements OnInit {
     };
     this.onAddPost.emit(newPost);
     this.addPostForm.reset();
+    this.addPostForm.controls['category'].setValue(
+      this.categories[0].title,
+      { onlySelf: true }
+    );
   }
 
   ngOnInit(): void {

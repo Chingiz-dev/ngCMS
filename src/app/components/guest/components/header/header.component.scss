@@ -15,20 +15,27 @@
   100% { transform: rotate(-360deg) }
 }
 
+.navbar {
+  background: #16a1e7;
+}
+
 ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 70%;
   margin: 0 auto;
   li {
     list-style-type: none;
-    padding: 5px;
+    background-color: #16a1e7;
     :hover {
       cursor: pointer;
-      background-color: lightcoral;
+      background-color: #2284b4;
     }
   }
   a {
+    display: inline-block;
+    padding: 10px 25px;
     text-decoration: none;
+    color: white;
   }
 }
