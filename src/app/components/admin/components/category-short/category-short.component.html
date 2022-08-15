@@ -1,7 +1,27 @@
 <div class="category">
-  <h2>{{ category.title | titlecase }} <fa-icon (click)="onDelete(category)" [ngStyle]="{'color': 'red'}" [icon]="faTimes">
+  <h2>{{ category.title | titlecase }}</h2>
+  <h3>{{category.description | slice:0:50 }}</h3>
+  <span class="icon">
+    <fa-icon [ngStyle]="{'color': editCategory ? 'red' : 'green'}" [icon]="faEdit" (click)="toggleEditCategory()">
     </fa-icon>
-    <fa-icon [routerLink]="[category.id]" [ngStyle]="{'color': 'green'}" [icon]="faEdit"></fa-icon>
-  </h2>
-  <h3>{{category.description | titlecase}}</h3>
+  </span>
+  <span class="icon">
+    <fa-icon (click)="onDelete(category)" [ngStyle]="{'color': 'red'}" [icon]="faTimes">
+    </fa-icon>
+  </span>
+
+  <form *ngIf="editCategory" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="title">Change Title</label>
+      <input type="text" name="title" [(ngModel)]="title" id="description" placeholder="title" />
+    </div>
+    <div class="form-control">
+      <label for="description">Change description</label>
+      <textarea name="description" [(ngModel)]="description" id="description" placeholder="description"></textarea>
+    </div>
+    <input type="submit" value="Save changes" />
+
+  </form>
+
+
 </div>

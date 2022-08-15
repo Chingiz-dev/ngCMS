@@ -36,15 +36,7 @@ export class PostService {
     const url = `${this.dbUrl}/${id}`;
     return this.http.get<Post>(url);
   }
-  // getPost(id: number): Observable<Post> {
-  //   const url = `${this.dbUrl}/${id}`;
-  //   return this.http.get<Post>(url).pipe(
-  //     catchError(()=>{
-  //       this.router.navigate(['/guest/posts']);
-  //       return EMPTY;
-  //     })
-  //   );
-  // }
+
 
   updatePost(post: Post): Observable<Post> {
     const url = `${this.dbUrl}/${post.id}`;

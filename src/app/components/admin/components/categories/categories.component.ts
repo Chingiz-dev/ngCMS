@@ -38,4 +38,10 @@ export class CategoriesComponent implements OnInit {
         () => (this.categories = this.categories.filter((item) => item.id !== category.id))
       );
   }
+
+  updateCategory(category: Category) {
+    this.categoriesService
+      .updateCategory(category)
+      .subscribe();
+  }
 }

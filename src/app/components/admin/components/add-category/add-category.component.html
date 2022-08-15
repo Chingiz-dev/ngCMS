@@ -1,1 +1,16 @@
-<p>add-category works!</p>
+<h3>Register new Category</h3>
+<form [formGroup]="addCategoryForm" (ngSubmit)="submitAddCategory()">
+  <div>
+    <label for="title">Category title</label>
+    <input formControlName="title" type="text" id="title">
+    <p *ngIf="this.addCategoryForm.get('title')?.invalid && this.addCategoryForm.get('title')?.touched"><small >Title is required</small></p>
+  </div>
+
+  <div>
+    <label for="description">Category description </label>
+    <input formControlName="description" type="text" id="description">
+    <p *ngIf="this.addCategoryForm.get('description')?.invalid && this.addCategoryForm.get('description')?.touched"><small >Description is required</small></p>
+  </div>
+
+  <button [disabled]="addCategoryForm.invalid"  type="submit">Add Category</button>
+</form>

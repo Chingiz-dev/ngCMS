@@ -1,5 +1,5 @@
 <p>Here we edit creat delete categories</p>
 <app-button color="{{ showAddCategory ? 'red': 'green'}}" text="{{ showAddCategory ? 'Close': 'Add'}}" (btnClick)="toggleAddCategory()"></app-button>
-<!-- <app-add-category *ngIf="showAddCategory" (onAddPost)="addNewCategory($event)"></app-add-category> -->
+<app-add-category *ngIf="showAddCategory" (onAddCategory)="addNewCategory($event)"></app-add-category>
 
-<app-category-short *ngFor="let category of categories" [category]="category" (onDeleteCategory)="deleteCategory(category)"></app-category-short>
+<app-category-short *ngFor="let category of categories" [category]="category" (onDeleteCategory)="deleteCategory(category)" (onUpdateCategory)="updateCategory(category)"></app-category-short>

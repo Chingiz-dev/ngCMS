@@ -11,6 +11,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { PostComponent } from './components/post/post.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './components/button/button.component';
 import { PostShortComponent } from './components/post-short/post-short.component';
 import { CategoryShortComponent } from './components/category-short/category-short.component';
@@ -35,6 +36,7 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
     CommonModule,
     FontAwesomeModule,
     AdminRoutingModule,
+    FormsModule,
     ReactiveFormsModule
   ]
 })
