@@ -2,24 +2,24 @@
 
 <form *ngIf="post" (ngSubmit)="onSubmit()">
   <div class="form-control">
-    <label for="title">Change Title</label>
     <input type="text" name="title" [(ngModel)]="post.title" id="title" placeholder="title" />
+    <label for="title"> Change Title</label>
   </div>
   <div class="form-control">
-    <label for="description">Change description</label>
-    <textarea name="description" [(ngModel)]="post.description" id="description" placeholder="description"></textarea>
-  </div>
-  <div class="form-control">
-    <label for="author">Change author</label>
     <input type="text" name="author" [(ngModel)]="post.author" id="author" placeholder="author" />
+    <label for="author"> Change author</label>
   </div>
   <div class="form-control">
-    <label for="views">Change views</label>
     <input type="number" name="views" [(ngModel)]="post.views" id="views" placeholder="post.views" />
+    <label for="views"> Change views</label>
   </div>
   <div class="form-control">
-    <label for="text">Change text</label>
+    <textarea name="description" [(ngModel)]="post.description" id="description" placeholder="description"></textarea>
+    <label for="description"> Change description</label>
+  </div>
+  <div class="form-control">
     <textarea name="text" [(ngModel)]="post.text" id="text" placeholder="text"></textarea>
+    <label for="text"> Change text</label>
   </div>
 
   <input type="submit" value="Save changes" />

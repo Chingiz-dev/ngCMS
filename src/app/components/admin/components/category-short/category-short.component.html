@@ -12,12 +12,12 @@
 
   <form *ngIf="editCategory" (ngSubmit)="onSubmit()">
     <div class="form-control">
-      <label for="title">Change Title</label>
       <input type="text" name="title" [(ngModel)]="title" id="title" placeholder="title" />
+      <label for="title"> Change Title</label>
     </div>
     <div class="form-control">
-      <label for="description">Change description</label>
       <textarea name="description" [(ngModel)]="description" id="description" placeholder="description"></textarea>
+      <label for="description"> Change description</label>
     </div>
     <input type="submit" value="Save changes" />
   </form>
