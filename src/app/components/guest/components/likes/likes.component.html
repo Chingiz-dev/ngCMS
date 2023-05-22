@@ -1,0 +1,5 @@
+<p class="fz-20">{{ likes }} Likes!</p>
+<p *ngIf="updatedAt" class="fz-20">Last changed {{ updatedAt | date : "HH:mm:ss dd/MM/yyyy" }}</p>
+<button class="fz-20 p-20 m-20" (click)="increase()">+1</button>
+<button class="fz-20 p-20 m-20" (click)="decrease()" [disabled]="cannotDecrease">-1</button>
+<button class="fz-20 p-20 m-20" (click)="clear()" [disabled]="cannotDecrease">=0</button>

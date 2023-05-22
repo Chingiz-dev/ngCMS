@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { CategoryComponent } from './components/category/category.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { LikesComponent } from './components/likes/likes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     LoginComponent,
     SignupComponent,
     CategoryComponent,
-    SidebarComponent
+    SidebarComponent,
+    LikesComponent
   ],
   imports: [
     CommonModule,
