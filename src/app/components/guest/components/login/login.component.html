@@ -14,7 +14,7 @@
     <input formControlName="password" type="password" id="typePasswordX">
     <label for="typePasswordX"> Password</label>
     <p *ngIf="this.loginForm.get('password')?.invalid && this.loginForm.get('password')?.touched">
-      <small>Password is required (min. length = 8, at least one digit)</small>
+      <small>Password is required (min. length = 6, at least one digit)</small>
     </p>
     <p *ngIf="isLoginFailed && !this.loginForm.get('password')?.touched">Login failed, try again</p>
   </div>
