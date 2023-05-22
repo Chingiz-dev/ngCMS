@@ -32,3 +32,14 @@ ng g s services/categories
 ng g g guards/auth
 * CanActivate
 * CanDeactivate
+
+ng g c components/guest/components/likes
+
+ng update @angular/core@14 @angular/cli@14
+
+ng update @angular/core@15 @angular/cli@15
+
+ng update @angular/cli @angular/core
+
+
+ng add @ngrx/store@latest --no-minimal
