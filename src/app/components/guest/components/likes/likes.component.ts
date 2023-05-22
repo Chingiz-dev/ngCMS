@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { Observable, map } from "rxjs";
+import { clear, decrease, increase, likeSelector } from "src/app/reducers/liker";
 
 @Component({
 	selector: "app-likes",
@@ -6,28 +9,27 @@ import { Component, OnInit } from "@angular/core";
 	styleUrls: ["./likes.component.scss"]
 })
 export class LikesComponent implements OnInit {
-	public likes = 0;
 	public updatedAt?: number;
-	public get cannotDecrease(): boolean {
-		return this.likes <= 0;
-	}
 
-	constructor() {}
+	public like$: Observable<number> = this.store.select(likeSelector);
+	cannotDecrease$ = this.like$.pipe(map((like) => like <= 0));
+
+	constructor(private store: Store) {}
 
 	ngOnInit(): void {}
 
 	public increase(): void {
 		this.updatedAt = Date.now();
-		this.likes++;
+		this.store.dispatch(increase());
 	}
 
 	public decrease(): void {
 		this.updatedAt = Date.now();
-		this.likes--;
+		this.store.dispatch(decrease());
 	}
 
 	public clear(): void {
 		this.updatedAt = Date.now();
-		this.likes = 0;
+		this.store.dispatch(clear());
 	}
 }
