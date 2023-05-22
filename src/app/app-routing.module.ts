@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'guest',
     loadChildren: () =>
       import('./components/guest/guest.module').then(
-        (m: { GuestModule: GuestModule }) => m.GuestModule
+        m  => m.GuestModule
       ),
   },
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
     canDeactivate: [AuthGuard],
     loadChildren: () =>
       import('./components/admin/admin.module').then(
-        (ma: { AdminModule: AdminModule }) => ma.AdminModule
+        (ma) => ma.AdminModule
       ),
   },
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
