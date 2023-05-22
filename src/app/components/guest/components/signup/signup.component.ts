@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {
-  FormControl,
-  FormGroup,
+  UntypedFormControl,
+  UntypedFormGroup,
   Validators,
 } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
@@ -13,11 +13,11 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
-  signupForm!: FormGroup;
+  signupForm!: UntypedFormGroup;
 
   constructor(private router: Router, private userService: UserService) {}
 
-  private validateAreEqual(fieldControl: FormControl) {
+  private validateAreEqual(fieldControl: UntypedFormControl) {
     return fieldControl.value === this.signupForm.get('password')?.value
       ? null
       : {
@@ -33,17 +33,17 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.signupForm = new FormGroup({
-      firstName: new FormControl('', [
+    this.signupForm = new UntypedFormGroup({
+      firstName: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
       ]),
-      lastName: new FormControl('', [
+      lastName: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
       ]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [
+      email: new UntypedFormControl('', [Validators.required, Validators.email]),
+      password: new UntypedFormControl('', [
         Validators.required,
         Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/),
       ]),
@@ -51,7 +51,7 @@ export class SignupComponent implements OnInit {
 
     this.signupForm.addControl(
       'confirm',
-      new FormControl('', [
+      new UntypedFormControl('', [
         Validators.required,
         this.validateAreEqual.bind(this),
       ])

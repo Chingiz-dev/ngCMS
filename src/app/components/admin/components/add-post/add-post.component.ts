@@ -1,4 +1,4 @@
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Post } from 'src/app/model/post';
 import { Category } from 'src/app/model/category';
@@ -12,7 +12,7 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class AddPostComponent implements OnInit {
   @Output() onAddPost: EventEmitter<Post> = new EventEmitter();
-  addPostForm!: FormGroup;
+  addPostForm!: UntypedFormGroup;
   categories: Category[] = [];
   post?: Post;
 
@@ -39,21 +39,21 @@ export class AddPostComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.addPostForm = new FormGroup({
-      title: new FormControl('', [
+    this.addPostForm = new UntypedFormGroup({
+      title: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(5),
       ]),
-      category: new FormControl([Validators.required]),
-      description: new FormControl('', [
+      category: new UntypedFormControl([Validators.required]),
+      description: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(10),
       ]),
-      author: new FormControl('', [
+      author: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
       ]),
-      text: new FormControl('', [
+      text: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(20),
       ]),

@@ -1,4 +1,4 @@
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Category } from 'src/app/model/category';
 import { CategoriesService } from 'src/app/services/categories.service';
@@ -10,7 +10,7 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class AddCategoryComponent implements OnInit {
   @Output() onAddCategory: EventEmitter<Category> = new EventEmitter();
-  addCategoryForm!: FormGroup;
+  addCategoryForm!: UntypedFormGroup;
   categories: Category[] = [];
   category?: Category;
   constructor(private categoriesService: CategoriesService) { }
@@ -25,12 +25,12 @@ export class AddCategoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.addCategoryForm = new FormGroup({
-      title: new FormControl('', [
+    this.addCategoryForm = new UntypedFormGroup({
+      title: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
       ]),
-      description: new FormControl('', [
+      description: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(10),
       ])
