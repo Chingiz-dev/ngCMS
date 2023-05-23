@@ -6,14 +6,14 @@ import {
 	createSelector,
 	MetaReducer
 } from "@ngrx/store";
-import { likerReducer, LikerState } from "./liker";
+import { likerReducer, LikerState, LIKER_KEY } from "./liker";
 
 export interface State {
-	liker: LikerState;
+	[LIKER_KEY]: LikerState;
 }
 
 export const reducers: ActionReducerMap<State> = {
-	liker: likerReducer
+	[LIKER_KEY]: likerReducer
 };
 
 export const metaReducers: MetaReducer<State>[] = isDevMode() ? [] : [];
